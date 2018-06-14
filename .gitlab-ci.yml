@@ -1,0 +1,7 @@
+stages:
+        - custom
+
+audit:
+        stage: custom
+        script:
+                - echo Ok! Ready to go!
