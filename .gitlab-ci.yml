@@ -1,7 +1,26 @@
 stages:
         - custom
 
-audit:
+daily-summary:
         stage: custom
+        only:
+                variables:
+                        - ${SITUATION} == "daily-summary"
         script:
-                - echo Ok! Ready to go!
+                - ./daily-summary.sh
+
+match-start:
+        stage: custom
+        only:
+                variables:
+                        - ${SITUATION} == "match-start"
+        script:
+                - ./match-start.sh
+
+check-players-count:
+        stage: custom
+        only:
+                variables:
+                        - ${SITUATION} == "check-players-count"
+        script:
+                - ./check-players-count.sh
