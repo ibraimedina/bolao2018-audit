@@ -8,6 +8,8 @@ daily-summary:
                         - $SITUATION == "daily-summary"
         script:
                 - ./daily-summary.sh
+                - git checkout master
+                - git commit -am '[daily-summary]'
 
 match-start:
         stage: custom
@@ -16,6 +18,8 @@ match-start:
                         - $SITUATION == "match-start"
         script:
                 - ./match-start.sh
+                - git checkout master
+                - git commit -am '[match-start]'
 
 check-players-count:
         stage: custom
