@@ -10,6 +10,7 @@ daily-summary:
                 - ./daily-summary.sh
                 - git checkout master
                 - git commit -am '[daily-summary]'
+                - git push origin master
 
 match-start:
         stage: custom
@@ -20,6 +21,7 @@ match-start:
                 - ./match-start.sh
                 - git checkout master
                 - git commit -am '[match-start]'
+                - git push origin master
 
 check-players-count:
         stage: custom
