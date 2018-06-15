@@ -11,6 +11,7 @@ daily-summary:
                 - git checkout master
                 - git config user.email "bolao2018-audit@gitlab.com"
                 - git config user.name "Bolao 2018 audit"
+                - git add daily-summary/
                 - git commit -am '[daily-summary]'
                 - git push origin master
 
@@ -24,6 +25,7 @@ match-start:
                 - git checkout master
                 - git config user.email "bolao2018-audit@gitlab.com"
                 - git config user.name "Bolao 2018 audit"
+                - git add match-start/
                 - git commit -am '[match-start]'
                 - git push origin master
 
