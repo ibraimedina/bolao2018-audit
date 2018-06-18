@@ -11,9 +11,10 @@ daily-summary:
                 - git checkout master
                 - git config user.email "bolao2018-audit@gitlab.com"
                 - git config user.name "Bolao 2018 audit"
+                - git remote add bolao https://gitlab-ci-token:TD9gTsJE5_Vti8D1kBUagitlab.com/ibraimedina/bolao2018-audit.git || true
                 - git add daily-summary/
                 - git commit -am '[daily-summary]'
-                - git push origin master
+                - git push bolao master
 
 match-start:
         stage: custom
@@ -25,9 +26,10 @@ match-start:
                 - git checkout master
                 - git config user.email "bolao2018-audit@gitlab.com"
                 - git config user.name "Bolao 2018 audit"
+                - git remote add bolao https://gitlab-ci-token:TD9gTsJE5_Vti8D1kBUagitlab.com/ibraimedina/bolao2018-audit.git || true
                 - git add match-start/
                 - git commit -am '[match-start]'
-                - git push origin master
+                - git push bolao master
 
 check-players-count:
         stage: custom
