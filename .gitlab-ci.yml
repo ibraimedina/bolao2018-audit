@@ -16,6 +16,21 @@ daily-summary:
                 - git commit -am '[daily-summary]'
                 - git push bolao master
 
+date-relatory:
+        stage: custom
+        only:
+                variables:
+                        - $SITUATION == "date-relatory"
+        script:
+                - ./date-relatory.sh
+                - git checkout master
+                - git config user.email "bolaoauditer@gitlab.com"
+                - git config user.name "Bolao Auditer"
+                - git remote add bolao https://gitlab-ci-token:TD9gTsJE5_Vti8D1kBUa@gitlab.com/ibraimedina/bolao2018-audit.git || true
+                - git add date-relatory/
+                - git commit -am '[date-relatory]'
+                - git push bolao master
+
 match-start:
         stage: custom
         only:
