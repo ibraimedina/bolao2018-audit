@@ -1,5 +1,5 @@
 playersCount=$(wc -l < players)
-styleLines=13
+styleLines=8
 
 curl -s http://lp.blog.br/bolao2018/ > home.html
 pageLines=$(grep \<tr\> home.html |wc -l)
